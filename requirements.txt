@@ -1,0 +1,12 @@
+requests
+beautifulsoup4
+lxml
+pandas
+numpy
+matplotlib
+seaborn
+wordcloud
+plotly
+jupyter
+fake-useragent
+tqdm
