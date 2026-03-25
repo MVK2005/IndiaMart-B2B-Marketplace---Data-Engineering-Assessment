@@ -1,6 +1,5 @@
 """
 Central configuration for the IndiaMART scraper.
-All tuneable parameters live here so the rest of the codebase stays clean.
 """
 
 import os

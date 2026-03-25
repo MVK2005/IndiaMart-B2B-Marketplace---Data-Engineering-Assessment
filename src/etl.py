@@ -37,7 +37,6 @@ def _parse_price(val: str | None) -> float | None:
 def _normalise_location(loc: str) -> dict[str, str]:
     """
     Best-effort split of 'City, State' or 'City State' strings.
-    IndiaMART locations are inconsistent, so we do our best.
     """
     if not loc:
         return {"city": "", "state": ""}

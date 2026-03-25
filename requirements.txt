@@ -10,3 +10,4 @@ plotly
 jupyter
 fake-useragent
 tqdm
+brotli

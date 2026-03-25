@@ -54,6 +54,7 @@ def main():
         print(f"Unknown command: {command}")
         print(__doc__)
         sys.exit(1)
+        
 
 
 if __name__ == "__main__":

@@ -1,9 +1,7 @@
 """
 HTML parser for IndiaMART search result pages.
 
-The parser extracts structured product/supplier records from each
-search-results page. It is intentionally decoupled from the HTTP layer
-so it can be tested independently with saved HTML fixtures.
+The parser extracts structured product/supplier records from each search-results page.
 """
 
 import re
@@ -61,8 +59,10 @@ def parse_search_page(html: str, category: str) -> list[dict[str, Any]]:
         - category
     """
     soup = BeautifulSoup(html, "lxml")
-    cards = soup.select(".brs, .lst, [class*='cardCont'], .snp-card, .productsCard")
+    cards = soup.select("[id^='prodCard']")
 
+    if not cards:
+        cards = soup.select(".brs, .lst, [class*='cardCont'], .snp-card, .productsCard")
     if not cards:
         cards = soup.select("div[data-product]")
     if not cards:
